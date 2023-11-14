@@ -67,3 +67,5 @@ fi
 if [ -n "${BASH:-}" -o -n "${ZSH_VERSION:-}" ] ; then
     hash -r 2> /dev/null
 fi
+export DJANGO_SECRET_KEY="c&6e7wn0q0*=gdd5%8b48ej)cj+pv^)##ccwo)t8!8xd_x(*rw"
+
