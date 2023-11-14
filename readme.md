@@ -6,12 +6,21 @@
 
 Aqui está uma visão geral da estrutura de diretórios do meu projeto:
 
-- `src/` - Contém o código-fonte do aplicativo.
-  - `app/` - Código relacionado ao aplicativo principal.
-  - `util/` - Funções utilitárias.
-- `docs/` - Documentação relacionada ao projeto.
-- `static/` - Arquivos estáticos, como CSS e JavaScript.
-- `templates/` - Modelos de HTML para o aplicativo da web.
-- `data/` - Dados de amostra e arquivos relacionados.
-  - `images/` - Imagens usadas no aplicativo.
-  - `csv/` - Arquivos CSV com dados de exemplo.
+- `myproject_website/`
+  - `env/` - Ambiente virtual.
+  - `src/` - Raiz diretório django.
+    - `django-myproject/` - Pasta do Django.
+        - `myproject/` - Projeto.
+        - `manage.py` - Arquivo para start.
+            - `settings/` - Arquivos de inicialização.
+
+
+## Anotações:
+- É possível herdar configurações tanto dos requirements.txt quando do settings.py.
+    - Para importar libs default de um arquivo requirements.txt basta adicionar a linha `-r _base.txt`
+    - Para alterar arquivos de inicialização (settings.py):
+        1. Crie uma pasta chamada `settings/`
+        2. Crie um arquivo __init__.py
+        3. Crie um arquivo se settings base chamado de _base.py
+        4. Copie settings.py para _base.py e exclua o mesmo.
+        5. Arrume o BASE_DIR voltando uma pasta.
