@@ -1,8 +1,16 @@
 import os
 from django.core.exceptions import  ImproperlyConfigured
+import sys
+from myproject.apps.core.versioning import get_git_changeset_timestamp
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Adicionando os caminhos de módulos externos ao python
+EXTERNAL_BASE = os.path.join(BASE_DIR,"externals")
+EXTERNAL_LIBS_PATH =os.path.join(EXTERNAL_BASE,"libs")
+EXTERNAL_APPS_PATH =os.path.join(EXTERNAL_BASE,"apps")
+sys.path = ["",EXTERNAL_LIBS_PATH,EXTERNAL_APPS_PATH]+sys.path
 
 def get_secret(setting):
     try:
@@ -118,6 +126,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'myproject','site_static'),
 ]
 STATIC_ROOT  = os.path.join(BASE_DIR,'static')
-MEDIA_ROOT = os.path.join(BASE_DIR,'media  ')
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-STATIC_URL = '/static/'
+with open(os.path.join(BASE_DIR,'myproject','settings','last-update.txt'),'r')as f:
+    timestamp = f.readline().strip()
+
+
+
+STATIC_URL = f'/static/{timestamp}'

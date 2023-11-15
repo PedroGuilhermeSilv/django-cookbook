@@ -25,4 +25,5 @@ Aqui está uma visão geral da estrutura de diretórios do meu projeto:
         4. Copie settings.py para _base.py e exclua o mesmo.
         5. Arrume o BASE_DIR voltando uma pasta.
     - Agora que temos um arquivo base basta apenas criar outro arquivo de inicialização como `production.py` e importar  `from ._base import *`. Obs: Altere em `wsgi.py` e `manage.py` 
+- É possível adicionar pastas com as denpendências externas do projeto como apps django e libs python. Lembrando que essa opção é a mais recomendada para bibiotecas externas, para pacotes Python bindings (pacotes que fornecem interfaces para bibliotecas ou APIs escritas em outras linguagens, permitem que você utilize funcionalidades dessas bibliotecas dentro do ambiente Python) é melhor usar o pip.
     
