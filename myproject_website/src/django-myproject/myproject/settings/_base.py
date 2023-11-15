@@ -3,7 +3,7 @@ from django.core.exceptions import  ImproperlyConfigured
 import sys
 from myproject.apps.core.versioning import get_git_changeset_timestamp
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Adicionando os caminhos de módulos externos ao python
@@ -76,8 +76,6 @@ LOCALE_PATHS = [
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -87,8 +85,7 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
