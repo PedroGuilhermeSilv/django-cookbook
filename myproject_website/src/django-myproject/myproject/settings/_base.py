@@ -16,7 +16,7 @@ def get_secret(setting):
     try:
         return os.environ[setting]
     except KeyError:
-        erro_msg = f'Set the {settings} environment variable'
+        erro_msg = f'Set the {setting} environment variable'
         raise ImproperlyConfigured(erro_msg)
 
 # SECURITY WARNING: keep the secret key used in production secret!
