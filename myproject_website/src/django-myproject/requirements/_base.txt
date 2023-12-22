@@ -1,3 +1,6 @@
-Django~=3.0.4
-djangorestframework
--e git://github.com/omab/python-social-auth.git@6b1e301c79#egg=python-social-auth
+pip~=20.0
+Django~=3.0.0
+gunicorn==20.0.4
+psycopg2-binary==2.8.3
+pytz==2019.1
+sqlparse==0.3.0

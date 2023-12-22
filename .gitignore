@@ -1,0 +1,48 @@
+### Template Python
+# arquivos compilados pra byte / otimizados / DDL
+_pycache_/
+*.py[cod]
+*$py.class
+
+# Logs de instaladores 
+pip-log. txt
+pip-delete-this-directory.txt
+
+# Relatórios de testes de unidade / cobertura 
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Traduções
+*.mo
+*.pot
+
+# Arquivos relacionados a Django:
+*.log
+db.sqlite3
+
+# Documentação Sphinx
+docs/_build/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Ambientes
+env/
+
+# Diretorios de midia e estáticos
+
+/media/
+!/media/.gitkeep
+
+/static/
+!/static/.gitkeep
